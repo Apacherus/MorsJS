@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div data-mors-class="User">
+   My name is {{name}}, and my age {{age}} years old.
+</div>
+<div data-mors-class="Message">
+    Hello dear {{Addressee}}!<br/>
+    Please follow my <a href="{{twitter}}">twitter</a>.<br/>
+    From Russia with love, by {{.User.name}}.
+    From Russia with love, by {{.User[age=24].name}}.
+    From Russia with love, by {{.User[0].name}}.
+    {{#loop:.User}}
+    {{name}}
+    {{loop.index*2+1}}
+    {{.User[loop.index].name}}
+    {{loop#}}
+</div>
+<script src="js/mors.js"></script>
+</body>
+</html>
