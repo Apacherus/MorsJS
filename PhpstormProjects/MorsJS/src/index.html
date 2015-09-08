@@ -5,21 +5,16 @@
     <title></title>
 </head>
 <body>
-<div data-mors-class="User">
-   My name is {{name}}, and my age {{age}} years old.
+<div class="test">
+    <h2>{{title}}</h2>
+    <ul>
+        <li data-mors=""></li>
+    </ul>
 </div>
-<div data-mors-class="Message">
-    Hello dear {{Addressee}}!<br/>
-    Please follow my <a href="{{twitter}}">twitter</a>.<br/>
-    From Russia with love, by {{.User.name}}.
-    From Russia with love, by {{.User[age=24].name}}.
-    From Russia with love, by {{.User[0].name}}.
-    {{#loop:.User}}
-    {{name}}
-    {{loop.index*2+1}}
-    {{.User[loop.index].name}}
-    {{loop#}}
-</div>
+
+<script src="js/vue.min.js"></script>
 <script src="js/mors.js"></script>
+<script src="js/app.js"></script>
 </body>
 </html>
+
